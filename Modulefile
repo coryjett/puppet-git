@@ -1,5 +1,5 @@
 name    'gajdaw-git'
-version '0.0.1'
+version '0.0.3'
 source 'git://github.com/pro-vagrant/puppet-git.git'
 author 'gajdaw'
 license 'MIT'
