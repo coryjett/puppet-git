@@ -7,10 +7,12 @@
   "source": "git@github.com:pro-vagrant/puppet-git.git",
   "issues_url": "https://github.com/pro-vagrant/puppet-git/issues",
   "project_page": "https://github.com/pro-vagrant/puppet-git",
-  "dependencies": [
+  "operatingsystem_support": [
     {
-      "version_range": ">= 1.0.0",
-      "name": "puppetlabs-stdlib"
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [
+        "12.04"
+      ]
     }
   ]
 }
