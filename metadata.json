@@ -1,0 +1,17 @@
+{
+  "name": "gajdaw-git",
+  "version": "0.1.0",
+  "author": "gajdaw",
+  "summary": "The module installs git from sources.",
+  "license": "MIT",
+  "source": "git@github.com:pro-vagrant/puppet-git.git",
+  "issues_url": "https://github.com/pro-vagrant/puppet-git/issues",
+  "project_page": "https://github.com/pro-vagrant/puppet-git",
+  "dependencies": [
+    {
+      "version_range": ">= 1.0.0",
+      "name": "puppetlabs-stdlib"
+    }
+  ]
+}
+
