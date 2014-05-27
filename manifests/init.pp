@@ -11,16 +11,32 @@ class git (
   $version = '1.9.0'
 ) {
 
-  package { [
-    "curl",
-    "libcurl4-openssl-dev",
-    "libexpat1-dev",
-    "gettext",
-    "libz-dev",
-    "libssl-dev",
-    "build-essential"
-  ]:
-    ensure => present
+  if defined(Package['curl']) == false {
+    package { 'curl': ensure => present }
+  }
+
+  if defined(Package['libcurl4-openssl-dev']) == false {
+    package { 'libcurl4-openssl-dev': ensure => present }
+  }
+
+  if defined(Package['libexpat1-dev']) == false {
+    package { 'libexpat1-dev': ensure => present }
+  }
+
+  if defined(Package['gettext']) == false {
+    package { 'gettext': ensure => present }
+  }
+
+  if defined(Package['libz-dev']) == false {
+    package { 'libz-dev': ensure => present }
+  }
+
+  if defined(Package['libssl-dev']) == false {
+    package { 'libssl-dev': ensure => present }
+  }
+
+  if defined(Package['build-essential']) == false {
+    package { 'build-essential': ensure => present }
   }
 
   exec { "gitsources-get":
