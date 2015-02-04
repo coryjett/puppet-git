@@ -1,6 +1,6 @@
 {
   "name": "gajdaw-git",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "author": "gajdaw",
   "summary": "The module installs git from sources.",
   "license": "MIT",
