@@ -37,9 +37,3 @@ The module was tested on:
 For development instructions visit
 [Puppet Modules Factory](https://github.com/puppet-by-examples/puppet-modules-factory)
 
-## Note
-
-Future versions will use shallow clone:
-
-    git clone -b v1.9.3 --depth 1 git://git.kernel.org/pub/scm/git/git.git
-
