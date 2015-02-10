@@ -1,19 +1,30 @@
 {
   "name": "gajdaw-git",
   "version": "0.1.5",
-  "author": "gajdaw",
-  "summary": "The module installs git from sources.",
+  "author": "Włodzimierz Gajda",
+  "summary": "Puppet module to install git by compiling sources",
   "license": "MIT",
-  "source": "git@github.com:pro-vagrant/puppet-git.git",
-  "issues_url": "https://github.com/puppet-by-examples/puppet-git/issues",
+  "source": "https://github.com/puppet-by-examples/puppet-git",
   "project_page": "https://github.com/puppet-by-examples/puppet-git",
+  "issues_url": "https://github.com/puppet-by-examples/puppet-git/issues",
+  "tags": [
+    "git",
+    "source",
+    "compile",
+    "install",
+    "make"
+  ],
   "operatingsystem_support": [
     {
       "operatingsystem": "Ubuntu",
       "operatingsystemrelease": [
-        "12.04"
+        "14.04"
       ]
     }
-  ]
+  ],
+  "requirements": [
+    { "name": "puppet", "version_requirement": "3.x" }
+  ],
+  "dependencies": []
 }
 
