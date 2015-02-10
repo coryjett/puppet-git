@@ -39,8 +39,12 @@ class git (
     package { 'build-essential': ensure => present }
   }
 
+  if defined(Package['git']) == false {
+    package { 'git': ensure => present }
+  }
+
   exec { 'gitsources-get':
-    command => "curl http://git-core.googlecode.com/files/git-${version}.tar.gz | tar xz",
+    command => "git clone -b v${version} --depth 1 git://git.kernel.org/pub/scm/git/git.git /tmp/git-${version}",
     cwd     => '/tmp',
     path    => '/usr/bin:/bin:/usr/sbin:/sbin',
     require => [Package['curl']]
