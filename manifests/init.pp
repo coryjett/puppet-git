@@ -8,7 +8,7 @@
 #
 #
 class git (
-  $version = '1.9.0'
+  $version = '2.3.0'
 ) {
 
   if defined(Package['curl']) == false {
