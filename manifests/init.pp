@@ -39,32 +39,32 @@ class git (
     package { 'build-essential': ensure => present }
   }
 
-  exec { "gitsources-get":
+  exec { 'gitsources-get':
     command => "curl http://git-core.googlecode.com/files/git-${version}.tar.gz | tar xz",
-    cwd     => "/tmp",
+    cwd     => '/tmp',
     path    => '/usr/bin:/bin:/usr/sbin:/sbin',
     require => [Package['curl']]
   }
 
-  exec { "gitsources-compile":
-    command => "make prefix=/usr/local all",
+  exec { 'gitsources-compile':
+    command => 'make prefix=/usr/local all',
     cwd     => "/tmp/git-${version}",
     path    => '/usr/bin:/bin:/usr/sbin:/sbin',
     require => [
-      Exec["gitsources-get"],
+      Exec['gitsources-get'],
       Package[
-        "libcurl4-openssl-dev",
-        "libexpat1-dev",
-        "gettext",
-        "libz-dev",
-        "libssl-dev",
-        "build-essential"
+        'libcurl4-openssl-dev',
+        'libexpat1-dev',
+        'gettext',
+        'libz-dev',
+        'libssl-dev',
+        'build-essential'
       ]
     ]
   }
 
-  exec { "gitsources-install":
-    command => "make prefix=/usr/local install",
+  exec { 'gitsources-install':
+    command => 'make prefix=/usr/local install',
     cwd     => "/tmp/git-${version}",
     path    => '/usr/bin:/bin:/usr/sbin:/sbin',
     require => [Exec['gitsources-compile']]
