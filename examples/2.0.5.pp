@@ -1,5 +1,6 @@
 #
-# sudo puppet apply /vagrant/modules/puppet-git/examples/2.0.5.pp
+# cd examples
+# sudo puppet apply 2.0.5.pp
 #
 
 class { 'git':

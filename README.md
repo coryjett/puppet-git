@@ -25,6 +25,11 @@ You can use the module running:
 
     sudo puppet apply -e 'include git'
 
+To install arbitrary version use `version` parameter.
+The examples how to do it are stored in `examples` directory.
+
+
+
 ## Limitations
 
 The module was tested on:
