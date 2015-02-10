@@ -1,17 +1,45 @@
-#git module
+# `gajdaw-git` Puppet Module
 
-The module installs git from sources. Source code is downloaded from googlecode:
+#### Table of Contents
 
-* http://git-core.googlecode.com/files/git-1.8.5.2.tar.gz
-* http://git-core.googlecode.com/files/git-1.9.0.tar.gz
+1. [Overview](#overview)
+2. [Setup](#setup)
+3. [Usage](#usage)
+4. [Limitations](#limitations)
+5. [Development](#development)
+6. [How do I test the module?](#how-do-i-test-the-module)
 
-The module was tested in:
+## Overview
 
-* ubuntu 12.04 (precise32 Vagrant box)
+This module installs installs git using sources.
 
-TODOs:
+## Setup
 
-In future versions we will use shallow clone:
+To install the module run:
+
+    sudo puppet install module gajdaw-git
+
+## Usage
+
+You can use the module running:
+
+    sudo puppet apply -e 'include git'
+
+## Limitations
+
+The module was tested on:
+
+* Ubuntu
+  - 14.04 (trusty) (Vagrant box: ubuntu/trusty32)
+
+## Development
+
+For development instructions visit
+[Puppet Modules Factory](https://github.com/puppet-by-examples/puppet-modules-factory)
+
+## Note
+
+Future versions will use shallow clone:
 
     git clone -b v1.9.3 --depth 1 git://git.kernel.org/pub/scm/git/git.git
 
