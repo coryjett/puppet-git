@@ -12,7 +12,9 @@
     "source",
     "compile",
     "install",
-    "make"
+    "update",
+    "make",
+    "build"
   ],
   "operatingsystem_support": [
     {
