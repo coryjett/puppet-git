@@ -32,10 +32,12 @@ The examples how to do it are stored in `examples` directory.
 
 ## Limitations
 
-The module was tested on:
+## Limitations
 
-* Ubuntu
-  - 14.04 (trusty) (Vagrant box: ubuntu/trusty32)
+The module was tested on all the platforms that appear in `metadata.json`.
+
+The results of tests are available in
+[test-output.txt](https://github.com/puppet-by-examples/puppet-git/blob/master/test-output.txt) file.
 
 ## Development
 
