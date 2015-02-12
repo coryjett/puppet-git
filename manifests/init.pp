@@ -11,6 +11,11 @@ class git (
   $version = '2.3.0'
 ) {
 
+  if !validate_platform($module_name) {
+    fail("Platform not supported in module '${module_name}'.")
+  }
+
+
   if defined(Package['curl']) == false {
     package { 'curl': ensure => present }
   }
