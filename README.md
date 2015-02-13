@@ -1,4 +1,5 @@
-# `gajdaw-git` Puppet Module
+# Puppet Module
+# `gajdaw/git`
 
 #### Table of Contents
 
@@ -6,41 +7,36 @@
 2. [Setup](#setup)
 3. [Usage](#usage)
 4. [Limitations](#limitations)
-5. [Development](#development)
-6. [How do I test the module?](#how-do-i-test-the-module)
+5. [Tests](#tests)
 
-## Overview
+## 1. Overview
 
-This module installs installs git using sources.
+The module installs git by compiling sources.
 
-## Setup
+## 2. Setup
 
 To install the module run:
 
     sudo puppet install module gajdaw-git
 
-## Usage
+## 3. Usage
 
-You can use the module running:
+To apply `git` class use the following command:
 
     sudo puppet apply -e 'include git'
 
-To install arbitrary version use `version` parameter.
-The examples how to do it are stored in `examples` directory.
+You can also use example manifests:
 
-
+    sudo puppet apply /etc/puppet/modules/git/examples/default.pp
+    sudo puppet apply /etc/puppet/modules/git/examples/1.8.5.pp
+    sudo puppet apply /etc/puppet/modules/git/examples/2.0.5.pp
 
 ## Limitations
 
-## Limitations
+You will find the exact information about supported platforms
+in `metadata.json` file.
 
-The module was tested on all the platforms that appear in `metadata.json`.
+## Tests
 
-The results of tests are available in
-[test-output.txt](https://github.com/puppet-by-examples/puppet-git/blob/master/test-output.txt) file.
-
-## Development
-
-For development instructions visit
-[Puppet Modules Factory](https://github.com/puppet-by-examples/puppet-modules-factory)
-
+Log of tests produced with [puppet-modules-factory](https://github.com/puppet-by-examples/puppet-modules-factory)
+is available in [gh-pages branch](/tree/gh-pages/log).

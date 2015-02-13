@@ -1,6 +1,6 @@
 #
 # cd examples
-# sudo puppet apply 2.0.5.pp
+# sudo puppet apply /etc/puppet/modules/git/examples/2.0.5.pp
 #
 
 class { 'git':
