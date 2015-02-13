@@ -39,4 +39,4 @@ in `metadata.json` file.
 ## Tests
 
 Log of tests produced with [puppet-modules-factory](https://github.com/puppet-by-examples/puppet-modules-factory)
-is available in [gh-pages branch](/tree/gh-pages/log).
+is available in [gh-pages branch](https://github.com/puppet-by-examples/puppet-git/tree/gh-pages/log).
