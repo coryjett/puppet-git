@@ -11,10 +11,14 @@ class git (
   $version = '2.3.0'
 ) {
 
+  # validate_platform() function comes from
+  # puppet module gajdaw/diverse_functions
+  #
+  #     https://forge.puppetlabs.com/gajdaw/diverse_functions
+  #
   if !validate_platform($module_name) {
     fail("Platform not supported in module '${module_name}'.")
   }
-
 
   if defined(Package['curl']) == false {
     package { 'curl': ensure => present }
