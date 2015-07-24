@@ -46,6 +46,12 @@
       "operatingsystemrelease": [
         "14.4.0"
       ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "6.6"
+      ]
     }
   ],
   "requirements": [
