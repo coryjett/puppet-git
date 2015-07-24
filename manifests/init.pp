@@ -49,14 +49,13 @@ class git (
     cwd     => "/tmp/git-${version}",
     path    => '/usr/bin:/bin:/usr/sbin:/sbin',
     require => [
-      Exec['gitsources-get'],
+      Exec[
+        'gitsources-get',
+        'yum Group Install'
+      ],
       Package[
-        'libcurl4-openssl-dev',
-        'libexpat1-dev',
         'gettext',
-        'libz-dev',
-        'libssl-dev',
-        'build-essential'
+        'curl'
       ]
     ]
   }
