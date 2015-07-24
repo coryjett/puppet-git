@@ -24,28 +24,13 @@ class git (
     package { 'curl': ensure => present }
   }
 
-  if defined(Package['libcurl4-openssl-dev']) == false {
-    package { 'libcurl4-openssl-dev': ensure => present }
-  }
-
-  if defined(Package['libexpat1-dev']) == false {
-    package { 'libexpat1-dev': ensure => present }
-  }
-
   if defined(Package['gettext']) == false {
     package { 'gettext': ensure => present }
   }
 
-  if defined(Package['libz-dev']) == false {
-    package { 'libz-dev': ensure => present }
-  }
-
-  if defined(Package['libssl-dev']) == false {
-    package { 'libssl-dev': ensure => present }
-  }
-
-  if defined(Package['build-essential']) == false {
-    package { 'build-essential': ensure => present }
+  exec { 'yum Group Install':
+    unless  => '/usr/bin/yum grouplist "Development tools" | /bin/grep "^Installed Groups"',
+    command => '/usr/bin/yum -y groupinstall "Development tools"',
   }
 
   if defined(Package['git']) == false {
