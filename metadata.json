@@ -22,6 +22,12 @@
       "operatingsystemrelease": [
         "14.04"
       ]
+    },
+    {
+      "operatingsystem": "Redhat",
+      "operatingsystemrelease": [
+        "6.5"
+      ]
     }
   ],
   "requirements": [
