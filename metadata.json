@@ -40,6 +40,12 @@
       "operatingsystemrelease": [
         "6.6"
       ]
+    },
+    {
+      "operatingsystem": "Darwin",
+      "operatingsystemrelease": [
+        "14.4.0"
+      ]
     }
   ],
   "requirements": [
